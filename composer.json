@@ -1,0 +1,35 @@
+{
+    "name": "app/sistema-gestion",
+    "type": "project",
+    "description": "Sistema de Gestion de Salud",
+    "require": {
+        "php": "^7.3",
+        "laravel/framework": "^8.0",
+        "laravel/tinker": "^2.0",
+        "guzzlehttp/guzzle": "^7.0.1"
+    },
+    "require-dev": {},
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        },
+        "files": [
+            "php/fpdf/fpdf.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ]
+    }
+}
