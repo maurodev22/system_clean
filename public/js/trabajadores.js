@@ -73,7 +73,7 @@ function setNav(section, el) {
     }
 
     if (sectionTitles[section]) {
-        document.title = 'Sistema de Gestion — ' + sectionTitles[section];
+        document.title = 'Sistema de Gestion de Salud — ' + sectionTitles[section];
     }
 
     if (section === 'trabajadores') {
@@ -99,7 +99,7 @@ function setNavAltoRiesgo(tipo) {
     if (aside) aside.style.display = 'none';
     currentAltoRiesgoFilter = tipo;
     var labels = {liniero:'Linieros', torrero:'Torreros', operario_cables:'Operarios de Cables', chofer:'Choferes', operador_grua:'Operadores de Grua'};
-    document.title = 'Sistema de Gestion — Alto Riesgo: ' + (labels[tipo] || tipo);
+    document.title = 'Sistema de Gestion de Salud — Alto Riesgo: ' + (labels[tipo] || tipo);
     loadAltoRiesgo(tipo);
 }
 

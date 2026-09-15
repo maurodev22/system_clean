@@ -58,7 +58,7 @@
                 </div>
                 <div id="alertasVencimiento" style="margin-bottom:16px"></div>
                 <div style="margin-top:20px;padding:20px;border:1px solid var(--gray-light);border-radius:var(--radius)">
-                    <h3 style="color:var(--blue);margin-bottom:10px">Sistema de Gestion de Salud Laboral</h3>
+                    <h3 style="color:var(--blue);margin-bottom:10px">Sistema de Gestion de Salud</h3>
                     <p style="color:var(--black);font-size:13px;line-height:1.8">
                         Plataforma para el seguimiento y control de la salud de los trabajadores.
                         Gestion de trabajadores, donaciones de sangre, alto riesgo y estadisticas.

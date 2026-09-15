@@ -1,5 +1,5 @@
 <?php
-// Manual de usuario del Sistema de Gestion de Trabajadores
+// Manual de usuario del Sistema de Gestion de Salud
 // Ruta: /manual (servido por routes/web.php)
 ?>
 <!DOCTYPE html>
@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual de Usuario &mdash; Sistema de Gestion</title>
+    <title>Manual de Usuario &mdash; Sistema de Gestion de Salud</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Arial, sans-serif; background: #f3f6fb; color: #1a1a1a; line-height: 1.6; }
@@ -36,7 +36,7 @@
 <body>
     <div class="header">
         <div class="wrap">
-            <h1>Manual de Usuario &mdash; Sistema de Gestion de Trabajadores</h1>
+            <h1>Manual de Usuario &mdash; Sistema de Gestion de Salud</h1>
             <p>Version 1.0</p>
         </div>
     </div>

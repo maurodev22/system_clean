@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Gestion &mdash; @yield('title', 'Trabajadores')</title>
+    <title>Sistema de Gestion de Salud &mdash; @yield('title', 'Trabajadores')</title>
     <link rel="stylesheet" href="{{ asset('css/main.css') }}?v={{ filemtime(public_path('css/main.css')) }}">
     @stack('styles')
     <script src="{{ asset('js/chart.umd.min.js') }}?v={{ filemtime(public_path('js/chart.umd.min.js')) }}"></script>
@@ -14,7 +14,7 @@
         <header class="app-header">
             <div class="header-brand">
                 <div class="header-text">
-                    <h1>Sistema de Gestion</h1>
+                    <h1>Sistema de Gestion de Salud</h1>
                 </div>
             </div>
             <div class="header-actions">

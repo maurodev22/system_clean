@@ -165,7 +165,7 @@ class ExportController extends Controller
             td { padding: 6px 10px; border: 1px solid #d0d0d0; }
         </style></head><body>
         <table>
-            <tr><th colspan="' . count($headers) . '">Sistema de Gestion &mdash; ' . htmlspecialchars($titleLabel) . '</th></tr>
+            <tr><th colspan="' . count($headers) . '">Sistema de Gestion de Salud &mdash; ' . htmlspecialchars($titleLabel) . '</th></tr>
             <tr><td colspan="' . count($headers) . '" style="font-size:11px;color:#555;text-align:center">Generado: ' . date('d/m/Y H:i:s') . '</td></tr>';
 
         if (!empty($data)) {
@@ -212,7 +212,7 @@ class ExportController extends Controller
         $pdf->AddPage();
         $pdf->SetFont('Helvetica', 'B', 10);
         $pdf->SetTextColor(0, 48, 135);
-        $pdf->Cell(0, 6, 'Sistema de Gestion de Salud Laboral', 0, 1, 'C');
+        $pdf->Cell(0, 6, 'Sistema de Gestion de Salud', 0, 1, 'C');
         $pdf->SetFont('Helvetica', '', 8);
         $pdf->SetTextColor(85, 85, 85);
         $pdf->Cell(0, 5, iconv('UTF-8', 'ISO-8859-1', $title), 0, 1, 'C');

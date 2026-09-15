@@ -1,7 +1,7 @@
 {
     "name": "app/sistema-gestion",
     "type": "project",
-    "description": "Sistema de Gestion de Salud Laboral",
+    "description": "Sistema de Gestion de Salud",
     "require": {
         "php": "^7.3",
         "laravel/framework": "^8.0",

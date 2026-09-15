@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel Administrativo &mdash; Sistema de Gestion</title>
+    <title>Panel Administrativo &mdash; Sistema de Gestion de Salud</title>
     <link rel="stylesheet" href="{{ asset('css/main.css') }}?v={{ filemtime(public_path('css/main.css')) }}">
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}?v={{ filemtime(public_path('css/admin.css')) }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -13,7 +13,7 @@
         <header class="admin-header">
             <div class="admin-logo">
                 <div>
-                    <h1>Panel Administrativo &mdash; Sistema de Gestion</h1>
+                    <h1>Panel Administrativo &mdash; Sistema de Gestion de Salud</h1>
                     <p>Auditoria, usuarios y control del sistema</p>
                 </div>
             </div>

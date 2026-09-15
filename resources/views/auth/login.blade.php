@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Gestion &mdash; Iniciar Sesion</title>
+    <title>Sistema de Gestion de Salud &mdash; Iniciar Sesion</title>
     <link rel="stylesheet" href="{{ asset('css/main.css') }}?v={{ filemtime(public_path('css/main.css')) }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}?v={{ filemtime(public_path('css/login.css')) }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -12,7 +12,7 @@
     <div class="login-page">
         <div class="login-card">
             <div class="login-header">
-                <h1 class="login-title">Sistema de Gestion</h1>
+                <h1 class="login-title">Sistema de Gestion de Salud</h1>
                 <p class="login-subtitle">Gestion de salud de los Trabajadores</p>
             </div>
             <div class="login-body">
@@ -50,7 +50,7 @@
                 </form>
             </div>
             <div class="login-footer">
-                Sistema de Gestion de Salud Laboral<br>
+                Sistema de Gestion de Salud<br>
                 Sistema Interno v1.0
             </div>
         </div>
