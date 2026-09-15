@@ -1,7 +1,7 @@
 {
-    "name": "app/etecsa",
+    "name": "app/sistema-gestion",
     "type": "project",
-    "description": "ETECSA - Sistema de Gestion",
+    "description": "Sistema de Gestion de Salud Laboral",
     "require": {
         "php": "^7.3",
         "laravel/framework": "^8.0",

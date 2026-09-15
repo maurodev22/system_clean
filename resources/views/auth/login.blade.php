@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETECSA &mdash; Iniciar Sesion</title>
-    <link rel="icon" href="{{ asset('assets/img/Logo_ETECSA.png') }}">
+    <title>Sistema de Gestion &mdash; Iniciar Sesion</title>
     <link rel="stylesheet" href="{{ asset('css/main.css') }}?v={{ filemtime(public_path('css/main.css')) }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}?v={{ filemtime(public_path('css/login.css')) }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -13,11 +12,8 @@
     <div class="login-page">
         <div class="login-card">
             <div class="login-header">
-                <div class="login-logo">
-                    <img src="{{ asset('assets/img/Logo_ETECSA.png') }}" alt="ETECSA" style="width:64px;height:auto">
-                </div>
-                <h1 class="login-title">ETECSA</h1>
-                <p class="login-subtitle">Sistema de Gestion de salud de los Trabajadores</p>
+                <h1 class="login-title">Sistema de Gestion</h1>
+                <p class="login-subtitle">Gestion de salud de los Trabajadores</p>
             </div>
             <div class="login-body">
                 @if($errors->any())
@@ -54,8 +50,8 @@
                 </form>
             </div>
             <div class="login-footer">
-                ETECSA &mdash; Empresa de Telecomunicaciones de Cuba S.A.<br>
-                Division Pinar del Rio &middot; Sistema Interno v1.0
+                Sistema de Gestion de Salud Laboral<br>
+                Sistema Interno v1.0
             </div>
         </div>
     </div>

@@ -10,3 +10,20 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+
+# Archivos sensibles - no deben subirse al repositorio
+*.XLSX
+*.xlsx
+*.docx
+*.doc
+/storage/logs/*
+!/storage/logs/.gitignore
+/storage/framework/*
+!/storage/framework/.gitignore
+/public/check_session.php
+/public/favicon.ico
+/public/assets/img/Logo_ETECSA*
+/public/assets/img/etecsaFondo*
+/public/assets/img/*.png
+/public/assets/img/*.jpg
+/php/fpdf/tutorial/logo.png

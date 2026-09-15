@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETECSA &mdash; Panel Administrativo</title>
-    <link rel="icon" href="{{ asset('assets/img/Logo_ETECSA.png') }}">
+    <title>Panel Administrativo &mdash; Sistema de Gestion</title>
     <link rel="stylesheet" href="{{ asset('css/main.css') }}?v={{ filemtime(public_path('css/main.css')) }}">
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}?v={{ filemtime(public_path('css/admin.css')) }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -13,11 +12,8 @@
     <div class="admin-wrapper">
         <header class="admin-header">
             <div class="admin-logo">
-                <div class="admin-logo-icon">
-                    <img src="{{ asset('assets/img/Logo_ETECSA.png') }}" alt="ETECSA" style="height:36px;width:auto">
-                </div>
                 <div>
-                    <h1>Panel Administrativo &mdash; ETECSA</h1>
+                    <h1>Panel Administrativo &mdash; Sistema de Gestion</h1>
                     <p>Auditoria, usuarios y control del sistema</p>
                 </div>
             </div>

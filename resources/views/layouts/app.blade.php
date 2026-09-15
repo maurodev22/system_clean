@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETECSA &mdash; @yield('title', 'Sistema de Gestion')</title>
-    <link rel="icon" href="{{ asset('assets/img/Logo_ETECSA.png') }}">
+    <title>Sistema de Gestion &mdash; @yield('title', 'Trabajadores')</title>
     <link rel="stylesheet" href="{{ asset('css/main.css') }}?v={{ filemtime(public_path('css/main.css')) }}">
     @stack('styles')
     <script src="{{ asset('js/chart.umd.min.js') }}?v={{ filemtime(public_path('js/chart.umd.min.js')) }}"></script>
@@ -14,12 +13,8 @@
     <div class="app-wrapper">
         <header class="app-header">
             <div class="header-brand">
-                <div class="header-logo">
-                    <img src="{{ asset('assets/img/Logo_ETECSA.png') }}" alt="ETECSA" style="height:36px;width:auto">
-                </div>
                 <div class="header-text">
-                    <h1>ETECSA</h1>
-                    <p>Empresa de Telecomunicaciones de Cuba &middot; Division Pinar del Rio</p>
+                    <h1>Sistema de Gestion</h1>
                 </div>
             </div>
             <div class="header-actions">

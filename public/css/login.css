@@ -1,5 +1,5 @@
 /* ============================================================
-   login.css - Página de inicio de sesión ETECSA
+   login.css - Página de inicio de sesión
    ============================================================ */
 
 body {
@@ -12,7 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 24px;
-  background-image: url("../assets/img/etecsaFondo.jpg");
+  background: linear-gradient(135deg, #003087 0%, #00204f 100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['http://etecsa1.test', 'http://localhost', 'http://localhost:8080'],
+    'allowed_origins' => ['http://localhost', 'http://localhost:8080'],
 
     'allowed_origins_patterns' => [],
 

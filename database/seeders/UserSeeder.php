@@ -13,21 +13,21 @@ class UserSeeder extends Seeder
         DB::table('system_users')->insert([
             [
                 'username' => 'admin',
-                'password_hash' => Hash::make('admin123'),
+                'password_hash' => Hash::make('password'),
                 'role' => 'admin',
                 'full_name' => 'Administrador Sistema',
                 'activo' => true,
             ],
             [
-                'username' => 'Especialista',
-                'password_hash' => Hash::make('Especialista123'),
+                'username' => 'especialista',
+                'password_hash' => Hash::make('password'),
                 'role' => 'especialista',
                 'full_name' => 'Especialista de Division',
                 'activo' => true,
             ],
             [
-                'username' => 'Especialista Principal',
-                'password_hash' => Hash::make('EspecialistaPrincipal123'),
+                'username' => 'especialista_principal',
+                'password_hash' => Hash::make('password'),
                 'role' => 'especialista',
                 'full_name' => 'Especialista Principal',
                 'activo' => true,

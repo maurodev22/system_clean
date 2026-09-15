@@ -1,5 +1,5 @@
 // ============================================================
-// graficos.js - Graficos y estadisticas ETECSA
+// graficos.js - Graficos y estadisticas
 // Genera 4 graficos con Chart.js desde la base de datos:
 //   1. Distribucion por Sexo (dona)
 //   2. Trabajadores por Division (barras)

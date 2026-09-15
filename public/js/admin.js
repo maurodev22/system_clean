@@ -1,5 +1,5 @@
 // ============================================================
-// admin.js - Logica del panel administrativo ETECSA
+// admin.js - Logica del panel administrativo
 // Secciones: Auditoria, Gestion de Usuarios
 // Compatible con PHP 7.4 / PostgreSQL
 // ============================================================

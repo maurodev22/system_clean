@@ -1,5 +1,5 @@
 // ============================================================
-// trabajadores.js - Gestion completa de trabajadores ETECSA
+// trabajadores.js - Gestion completa de trabajadores
 // Funcionalidades: navegacion, CRUD, paginacion, busqueda,
 //                  control de inactividad, concurrencia,
 //                  validacion de formularios, confirmacion de salida
@@ -73,7 +73,7 @@ function setNav(section, el) {
     }
 
     if (sectionTitles[section]) {
-        document.title = 'ETECSA — ' + sectionTitles[section];
+        document.title = 'Sistema de Gestion — ' + sectionTitles[section];
     }
 
     if (section === 'trabajadores') {
@@ -99,7 +99,7 @@ function setNavAltoRiesgo(tipo) {
     if (aside) aside.style.display = 'none';
     currentAltoRiesgoFilter = tipo;
     var labels = {liniero:'Linieros', torrero:'Torreros', operario_cables:'Operarios de Cables', chofer:'Choferes', operador_grua:'Operadores de Grua'};
-    document.title = 'ETECSA — Alto Riesgo: ' + (labels[tipo] || tipo);
+    document.title = 'Sistema de Gestion — Alto Riesgo: ' + (labels[tipo] || tipo);
     loadAltoRiesgo(tipo);
 }
 

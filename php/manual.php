@@ -1,5 +1,5 @@
 <?php
-// Manual de usuario del Sistema de Gestion de Trabajadores ETECSA
+// Manual de usuario del Sistema de Gestion de Trabajadores
 // Ruta: /manual (servido por routes/web.php)
 ?>
 <!DOCTYPE html>
@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual de Usuario &mdash; ETECSA</title>
+    <title>Manual de Usuario &mdash; Sistema de Gestion</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Arial, sans-serif; background: #f3f6fb; color: #1a1a1a; line-height: 1.6; }
@@ -37,7 +37,7 @@
     <div class="header">
         <div class="wrap">
             <h1>Manual de Usuario &mdash; Sistema de Gestion de Trabajadores</h1>
-            <p>ETECSA &middot; Division Pinar del Rio &middot; Version 1.0</p>
+            <p>Version 1.0</p>
         </div>
     </div>
 
@@ -124,7 +124,7 @@
             </ul>
         </div>
 
-        <div class="footer">ETECSA &mdash; Empresa de Telecomunicaciones de Cuba &middot; Manual generado como parte del sistema &middot; <?= date('Y') ?></div>
+        <div class="footer">Manual generado como parte del sistema &middot; <?= date('Y') ?></div>
     </div>
 </body>
 </html>
