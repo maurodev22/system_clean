@@ -12,6 +12,8 @@ class ImportController extends Controller
 {
     public function preview(Request $request)
     {
+        $this->ensureEspecialistaPrincipal();
+
         $rows = $request->input('rows', []);
 
         if (empty($rows)) {
@@ -40,6 +42,8 @@ class ImportController extends Controller
 
     public function execute(Request $request)
     {
+        $this->ensureEspecialistaPrincipal();
+
         $rows = $request->input('rows', []);
 
         if (empty($rows)) {
@@ -132,6 +136,8 @@ class ImportController extends Controller
 
     public function checkDuplicates(Request $request)
     {
+        $this->ensureEspecialistaPrincipal();
+
         $idNumericos = $request->input('id_numericos', []);
 
         if (empty($idNumericos)) {
@@ -220,6 +226,14 @@ class ImportController extends Controller
 
         if (!empty($errors)) {
             throw new \Exception(implode('; ', $errors));
+        }
+    }
+
+    private function ensureEspecialistaPrincipal()
+    {
+        $user = Auth::user();
+        if (!$user || ($user->role !== 'admin' && $user->username !== 'especialista_principal')) {
+            abort(403, 'Solo el Especialista Principal puede importar datos');
         }
     }
 

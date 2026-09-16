@@ -80,6 +80,12 @@ function renderAuditLayout() {
             <option value="editar">Editar</option>
             <option value="agregar">Agregar</option>
             <option value="exportar">Exportar</option>
+            <option value="bloquear">Bloquear</option>
+            <option value="desbloquear">Desbloquear</option>
+            <option value="agregar_usuario">Agregar Usuario</option>
+            <option value="editar_usuario">Editar Usuario</option>
+            <option value="eliminar_usuario">Eliminar Usuario</option>
+            <option value="cambiar_password">Cambiar Contrasena</option>
         </select>
         <label>Usuario:</label>
         <input type="text" id="filterUsuario" placeholder="Nombre de usuario..." oninput="filterAudit()">

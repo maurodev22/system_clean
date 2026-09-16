@@ -29,6 +29,9 @@ class AuthController extends Controller
 
             $user = Auth::user();
 
+            $user->ultimo_acceso = now();
+            $user->save();
+
             $base = $user->password_changed_at ?: $user->created_at;
             if (!$base || \Carbon\Carbon::parse($base)->lte(now()->subDays(14))) {
                 $request->session()->put('must_change_password', true);

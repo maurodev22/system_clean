@@ -1,7 +1,7 @@
 {
-    "name": "app/sistema-gestion",
+    "name": "maurodev22/system_clean",
     "type": "project",
-    "description": "Sistema de Gestion de Salud",
+    "description": "Sistema de Gestion de Salud Ocupacional (RRHH) basado en Laravel y PostgreSQL",
     "require": {
         "php": "^7.3",
         "laravel/framework": "^8.0",

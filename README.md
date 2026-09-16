@@ -1,61 +1,122 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# SystemClean
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+Sistema de Gestión de Salud Ocupacional para el control de los factores humanos en recursos humanos (RRHH).
 
-## About Laravel
+Aplicación web desarrollada con **Laravel 8** y **PostgreSQL** que centraliza la vigilancia de la salud laboral de los trabajadores: registro de trabajadores, clasificación de riesgo, control de chequeos médicos, licencias de maternidad, donantes de sangre y estadísticas gerenciales.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Funcionalidades
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Gestión de trabajadores:** CRUD completo con búsqueda, filtrado por división, unidad organizativa y categoría de riesgo.
+- **Clasificación automática de riesgo:** el cargo se cruza contra un catálogo de posiciones y se clasifica automáticamente como alto riesgo (operarios de cables, choferes) con sus subcategorías.
+- **Módulo de maternidad:** cálculo automático del mes de gestación y de los periodos de licencia (6–18 meses), con estados controlados (a otorgar / otorgado / a incorporación).
+- **Control de chequeos médicos:** seguimiento de exámenes psicofisiológicos, chequeos especializados y chequeos de chofer, con detección automática de chequeos vencidos.
+- **Módulo de donantes de sangre:** registro de donaciones con estadísticas por tipo de sangre.
+- **Dashboards y estadísticas:** reportes agrupados por división, unidad organizativa, sexo, tipo de riesgo y tipo de sangre.
+- **Importación masiva:** vista previa de datos, detección de duplicados y ejecución de la importación.
+- **Exportación:** a Excel y PDF (FPDF).
+- **Seguridad por roles:** accesos diferenciados por `especialista` y `admin`.
+- **Control de concurrencia:** bloqueo de recursos con expiración (120 segundos) para evitar ediciones simultáneas.
+- **Traza de auditoría:** registro de usuario, acción e IP en cada operación.
+- **Seguridad de acceso:** limitador de intentos de inicio de sesión (5 intentos por minuto) y sesiones con renovación automática.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Stack tecnológico
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+| Capa       | Tecnología                          |
+|------------|-------------------------------------|
+| Backend    | PHP 7.3+, Laravel 8                 |
+| Base de datos | PostgreSQL                        |
+| Frontend   | Blade, HTML, CSS, JavaScript (fetch/AJAX) |
+| Reportes   | FPDF                                |
+| Herramientas | Composer, Artisan, Git            |
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Requisitos
 
-### Premium Partners
+- PHP >= 7.3
+- Composer
+- PostgreSQL >= 11
+- Extensiones PHP: `pgsql`, `pdo_pgsql`, `mbstring`, `iconv`
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+---
 
-## Contributing
+## Instalación
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/maurodev22/system_clean.git
+cd system_clean
 
-## Code of Conduct
+# 2. Instalar dependencias
+composer install
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# 3. Configurar variables de entorno
+cp .env.example .env
+php artisan key:generate
+```
 
-## Security Vulnerabilities
+### Configurar la base de datos (`.env`)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```env
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=system_clean
+DB_USERNAME=tu_usuario
+DB_PASSWORD=tu_password
+```
 
-## License
+```bash
+# 4. Crear las tablas
+php artisan migrate
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# 5. (Opcional) Cargar datos iniciales
+php artisan db:seed
+
+# 6. Iniciar el servidor
+php artisan serve
+```
+
+Accede a `http://localhost:8000`.
+
+---
+
+## Usuarios y roles
+
+| Rol          | Acceso                                                        |
+|--------------|---------------------------------------------------------------|
+| `especialista` | Dashboard de usuario, trabajadores, maternidad, donantes, importación/exportación |
+| `admin`      | Todo lo anterior + gestión de usuarios y traza de auditoría      |
+
+---
+
+## Estructura del proyecto
+
+```
+app/
+├── Http/
+│   └── Controllers/
+│       ├── Auth/           # Autenticación
+│       ├── TrabajadorController.php   # Trabajadores, maternidad, riesgos, bloqueos
+│       ├── DonanteController.php      # Donantes de sangre
+│       ├── AuditoriaController.php    # Traza de auditoría
+│       ├── UsuarioController.php      # Gestión de usuarios
+│       ├── ExportController.php       # Exportación a Excel/PDF
+│       └── ImportController.php       # Importación masiva
+├── Models/                 # Eloquent models
+└── routes/web.php          # Definición de rutas y autorización
+```
+
+---
+
+## Contribuciones
+
+Sugerencias y reportes de errores son bienvenidos. Abre un *issue* en el repositorio.
+
+## Licencia
+
+MIT

@@ -121,6 +121,7 @@
             <ul>
                 <li><strong>Auditoria</strong>: registro de inicios de sesion, ediciones, bloqueos y exportaciones, con filtros por accion, usuario y fecha.</li>
                 <li><strong>Usuarios</strong>: crear usuarios especialistas y editar datos. Solo el propio usuario puede cambiar su contrasena (maximo 1 vez por semana).</li>
+                <li><strong>Vigencia de contrasena</strong>: la contrasena vence a los 14 dias desde su creacion o ultimo cambio; al vencer, el sistema solicita crear una nueva, diferente a la anterior.</li>
             </ul>
         </div>
 
